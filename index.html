@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FDECEF" />
+  <title>Cherry Studio</title>
+  <meta name="description" content="Cherry Studio 是 lingling 的創作小世界：作品、造型、水晶與生活記錄。" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/cherry-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home" data-nav>
+        <img src="assets/cherry-icon.png" alt="" />
+        <span class="brand-name">
+          <span class="word">Cherry</span>
+          <span class="sub">Studio</span>
+        </span>
+      </a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-label="打開選單">☰</button>
+    </div>
+  </header>
+
+  <div class="drawer-bg" id="drawerBg"></div>
+  <aside class="drawer" id="drawer" aria-label="網站選單">
+    <a href="#/home" data-nav>首頁</a>
+    <a href="#/works" data-nav>作品廊</a>
+    <a href="#/styling" data-nav>今日旺我造型</a>
+    <a href="#/crystal" data-nav>水晶配搭</a>
+    <a href="#/about" data-nav>關於我</a>
+    <a href="#/brands" data-nav>我的品牌</a>
+    <p class="hint">第一版 · 示範作品可逐步換成真實內容</p>
+  </aside>
+
+  <main>
+    <section class="page is-on" id="page-home">
+      <div class="wrap">
+        <div class="card hero-card">
+          <p class="welcome">WELCOME TO MY CREATIVE WORLD</p>
+          <h1 class="display">Cherry <em>Studio</em></h1>
+          <p class="lead">圖像、造型、水晶和生活裡的小記錄，都放在同一個地方。這是一個可以慢慢長大的創作小世界。</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#/works" data-nav>睇我的作品</a>
+            <a class="btn btn-ghost" href="#/styling" data-nav>今日旺我造型</a>
+          </div>
+          <div class="badge-row">
+            <span class="badge">第一版</span>
+            <span class="badge">作品廊</span>
+            <span class="badge">可玩小工具</span>
+            <span class="badge">關於我</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="kicker">Explore</p>
+          <h2>先從這裡逛起</h2>
+          <p class="note">以下部分是示範內容，之後會逐項換成真實作品和生活照。</p>
+        </div>
+        <div class="door-grid">
+          <a class="door" href="#/works" data-nav>
+            <div class="icon">🖼</div>
+            <h3>作品廊</h3>
+            <p>AI 圖像、造型靈感和生活照，會一起放在這裡。</p>
+          </a>
+          <a class="door" href="#/styling" data-nav>
+            <div class="icon">✨</div>
+            <h3>今日旺我造型</h3>
+            <p>用心情、場合和一張塔羅牌，生成今日可以截圖分享的造型靈感。</p>
+          </a>
+          <a class="door" href="#/crystal" data-nav>
+            <div class="icon">💎</div>
+            <h3>水晶配搭</h3>
+            <p>用顏色、心情和星座，配一條虛擬水晶手鏈。</p>
+          </a>
+          <a class="door" href="#/about" data-nav>
+            <div class="icon">🍒</div>
+            <h3>關於我</h3>
+            <p>認識站主 lingling，以及這個小世界是怎樣長大的。</p>
+          </a>
+        </div>
+        <a class="quiet-link" href="#/brands" data-nav>認識我的品牌 →</a>
+      </div>
+    </section>
+
+    <section class="page" id="page-works">
+      <div class="wrap">
+        <p class="kicker">Gallery</p>
+        <h2>作品廊</h2>
+        <p class="note">標了「示範」的是預覽用作品；生活欄則預留了位置，等你把生活照放進來。</p>
+        <div class="filters" id="filters"></div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-play">
+      <div class="wrap">
+        <p class="kicker">Play</p>
+        <h2>玩一玩</h2>
+        <p class="note">兩個可以慢慢玩、亦方便分享的小工具。只供娛樂和造型靈感。</p>
+        <div class="tool-grid" style="margin-top:16px">
+          <a class="door" href="#/styling" data-nav>
+            <div class="icon">✨</div>
+            <h3>今日旺我造型</h3>
+            <p>MBTI、星座、場合、心情，再抽一張牌，生成衣著和顏色靈感。</p>
+          </a>
+          <a class="door" href="#/crystal" data-nav>
+            <div class="icon">💎</div>
+            <h3>水晶配搭</h3>
+            <p>選顏色和心情，即時看到一條虛擬手鏈。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-styling">
+      <div class="wrap">
+        <p class="kicker">Cherry Energy Styling</p>
+        <h2>今日旺我造型</h2>
+        <p class="note">配合今日心情和場合，生成衣著、首飾、水晶、顏色及髮型靈感。只供娛樂，不是命運指引。</p>
+        <div class="card form-card" style="margin-top:16px">
+          <div class="field">
+            <label for="mbti">MBTI</label>
+            <select id="mbti"></select>
+          </div>
+          <div class="field">
+            <label for="zodiac">星座</label>
+            <select id="zodiac"></select>
+          </div>
+          <div class="field">
+            <label for="occasion">今日場合</label>
+            <select id="occasion"></select>
+          </div>
+          <div class="field">
+            <label for="mood">今日心情</label>
+            <select id="mood"></select>
+          </div>
+          <div class="tarot-box">
+            <strong>今日塔羅</strong>
+            <p class="state" id="tarotState">未抽牌</p>
+            <button class="btn btn-ghost" type="button" id="drawTarot">抽一張牌</button>
+          </div>
+          <button class="btn btn-primary" type="button" id="makeLook" style="width:100%">✨ 今日旺我造型</button>
+          <div class="result" id="lookResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-crystal">
+      <div class="wrap">
+        <p class="kicker">Crystal Studio</p>
+        <h2>水晶配搭</h2>
+        <p class="note">用顏色、心情和星座配出一條虛擬手鏈。這是美感遊戲，不是功效承諾。</p>
+        <div class="card form-card" style="margin-top:16px">
+          <div class="field">
+            <label for="crystalColor">主色</label>
+            <select id="crystalColor"></select>
+          </div>
+          <div class="field">
+            <label for="crystalMood">心情</label>
+            <select id="crystalMood"></select>
+          </div>
+          <div class="field">
+            <label for="crystalZodiac">星座</label>
+            <select id="crystalZodiac"></select>
+          </div>
+          <button class="btn btn-primary" type="button" id="makeCrystal" style="width:100%">配一條手鏈</button>
+          <div class="result" id="crystalResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-about">
+      <div class="wrap">
+        <p class="kicker">About</p>
+        <h2>關於我</h2>
+        <div class="card" style="margin-top:16px">
+          <p class="bio">你好，我是 lingling。Cherry Studio 是我的創作小世界：喜歡的圖像、造型靈感，以及生活裡的小片段，都會放在這裡。</p>
+          <p class="bio">我在香港，亦有參與健康產品的工作。如果你想認識紫花油、古寶或日本叮叮，可以從下面那扇小門走進去。</p>
+        </div>
+        <div class="section">
+          <h2 style="font-size:22px">生活照</h2>
+          <p class="note">這三格先留空。你把照片傳給我，我可以幫你放上來。</p>
+        </div>
+        <div class="portrait-grid">
+          <div class="slot">📷<br>生活照位置 1<br>橫圖較好看</div>
+          <div class="slot">📷<br>生活照位置 2</div>
+          <div class="slot">📷<br>生活照位置 3</div>
+        </div>
+        <a class="quiet-link" href="#/brands" data-nav>認識我的品牌 →</a>
+      </div>
+    </section>
+
+    <section class="page" id="page-brands">
+      <div class="wrap">
+        <p class="kicker">Brands</p>
+        <h2>我的品牌</h2>
+        <p class="note">這不是商店，只是一條溫柔的小路，連到我日常亦有參與的品牌。想深入了解，可到官方網站，或睇我整理的速查頁。</p>
+        <div class="brand-grid" style="margin-top:16px">
+          <article class="brand-card">
+            <h3>紫花油</h3>
+            <p>香港常見的家庭藥油。這裡沒有賣貨，只想把認識它的門打開。</p>
+            <div class="links">
+              <a href="https://lingling3899.github.io/zihua-cs/" target="_blank" rel="noopener">客服速查</a>
+            </div>
+          </article>
+          <article class="brand-card">
+            <h3>古寶 CUPAL</h3>
+            <p>健康補充品系列。官方網站有完整產品介紹；我亦做了一頁客服速查。</p>
+            <div class="links">
+              <a href="https://www.cupal.com.hk/" target="_blank" rel="noopener">官方網站</a>
+              <a href="https://lingling3899.github.io/cupal-cs/" target="_blank" rel="noopener">客服速查</a>
+            </div>
+          </article>
+          <article class="brand-card">
+            <h3>日本叮叮</h3>
+            <p>防蚊系列。想知道產品資料，可先看官方網站，或我整理的速查頁。</p>
+            <div class="links">
+              <a href="https://www.japandingding.com/" target="_blank" rel="noopener">官方網站</a>
+              <a href="https://lingling3899.github.io/dingding-cs/" target="_blank" rel="noopener">客服速查</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer wrap">
+      <div class="word">Cherry</div>
+      <div class="sub">Studio</div>
+      <p>Create · Share · Enjoy ♡</p>
+      <p>© 2026 Cherry Studio · 第一版</p>
+    </footer>
+  </main>
+
+  <nav class="tabbar" aria-label="主要分頁">
+    <a href="#/home" data-nav data-tab="home"><span>🏠</span>首頁</a>
+    <a href="#/works" data-nav data-tab="works"><span>🖼</span>作品</a>
+    <a href="#/play" data-nav data-tab="play"><span>✨</span>玩一玩</a>
+    <a href="#/about" data-nav data-tab="about"><span>🍒</span>關於</a>
+  </nav>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-card" id="lightboxCard"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
